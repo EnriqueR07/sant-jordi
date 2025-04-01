@@ -1,34 +1,86 @@
+body{
+    background-color: rgb(142, 251, 142);
+        
+}
 .grid{
     width: 560px;
     height: 560px;
-    border:solid black;
     display: flex;
+    flex-wrap: wrap;
 
 }
 .grid div{
     width: 20px;
     height: 20px;
-    border: solid red;
     box-sizing: border-box;
 }
+
 .red{
- background-color: rgb(249, 10, 10);
+    background-image: url(./img/flor.png);
+    background-size: cover;
+    background-color: rgb(251, 142, 142);
 
 }
 .blue{
-    background-color: rgb(138, 197, 255);
-   
-   }
+background-size: cover;
+background-image: url(./img/Captura\ de\ pantalla\ 2025-03-12\ 102533.png);
+background-color: rgb(0, 100, 230);
 
-   .pink{
-    background-color: rgb(240, 81, 230);
-   
-   }
+}
+.green{
+    background-color: rgb(142, 251, 142);
+    background-size: cover;
 
-   .green{
-    background-color: rgb(87, 255, 101);
-   
-   }
+}
+.yellow{
+    background-image: url(./img/petalo\ 1.png);
+    background-size: cover;
+    background-color: rgb(251, 224, 142);
+
+
+}
 .purple{
-    background-color: blueviolet;
+    background-color: rgb(140, 46, 228);
+    background-size: cover;
+
+}
+
+.princep{
+background-image: url(./img/principe\ derecha.png);
+background-size: cover;
+background-color: aqua;
+}
+
+.drac1{
+    background-color: rgb(255, 94, 94);
+    background-image: url(./img/dragon\ rojo\ derecha.png);
+    background-size: cover;
+}
+.drac2{
+    background-color: rgb(255, 149, 79);
+    background-image: url(./img/dragon\ naranja\ \ derecha.png);
+    background-size: cover;
+}
+.drac3{
+    background-color: rgb(151, 255, 100);
+    background-image: url(./img/dragon\ verde\ derecha.png);
+    background-size: cover;
+    
+}
+.drac4{
+    background-color: rgb(100, 180, 255);
+    background-image: url(./img/dragon\ azul\ derech.png);
+    background-size: cover;
+    
+}
+.drac-asustat{
+    background-color: rgb(97, 97, 97);
+    background-image: url(./img/dragon\ asustado\ izquieda.png);
+    background-size: cover;
+}
+.dragon{
+    background-color: rgb(255, 113, 113);
+    background-size: cover;
+
+    
 }
