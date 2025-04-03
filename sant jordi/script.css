@@ -15,31 +15,39 @@ body{
     box-sizing: border-box;
 }
 
-.red{
+
+
+
+
+
+
+
+
+.rosa{
     background-image: url(./img/flor.png);
     background-size: cover;
     background-color: rgb(251, 142, 142);
 
 }
-.blue{
+.murs{
 background-size: cover;
 background-image: url(./img/Captura\ de\ pantalla\ 2025-03-12\ 102533.png);
 background-color: rgb(0, 100, 230);
 
 }
-.green{
+.huecos{
     background-color: rgb(142, 251, 142);
     background-size: cover;
 
 }
-.yellow{
+.petalos{
     background-image: url(./img/petalo\ 1.png);
     background-size: cover;
     background-color: rgb(251, 224, 142);
 
 
 }
-.purple{
+.guarida{
     background-color: rgb(140, 46, 228);
     background-size: cover;
 
