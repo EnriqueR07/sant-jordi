@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let score = 0;
     const grid = document.querySelector(".grid");
 
-    if (!grid) {
-        console.error("No se encontró el elemento .grid en el HTML.");
-        return;
-    }
+
 
     // 0 - petalos 
     // 1 - paret 
@@ -24,27 +21,27 @@ document.addEventListener("DOMContentLoaded", function () {
         1, 3, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 3, 1,
         1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
         1, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 1,
+        1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 0, 1,
         1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-        1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-        1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 5, 5, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 5, 5, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 5, 5, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 5, 5, 5, 5, 5, 5, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 2, 2, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
         1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
         1, 0, 0, 4, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
         1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-        1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-        1, 3, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 3, 1,
+        1, 5, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
+        1, 3, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 3, 1,
         1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
         1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
         1, 0, 0, 0, 0, 4, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 4, 0, 0, 1,
         1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
         1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
-        1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1,
+        1, 0, 0, 0, 0, 0, 3, 0, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 5, 4, 3, 2, 1,
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 
         ]
@@ -60,31 +57,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // create board
     let squares = [];
-
-    function createBoard() {
+    // create board
+    
+    function createboard(){
         for (let i = 0; i < layout.length; i++) {
             const square = document.createElement("div");
-
+    
             if (layout[i] == 0) {
-                square.classList.add("hueco");
+                square.classList.add("huecos");
             } else if (layout[i] == 1) {
                 square.classList.add("murs");
-            } else if (layout[i] == 2) {
-                square.classList.add("rosa");
+            } else if (layout[i] == 2) {  // Cambiado de rosa a guarida
+                square.classList.add("guarida"); // Esto es para el valor 2 en el layout
             } else if (layout[i] == 3) {
                 square.classList.add("petalos");
             } else if (layout[i] == 4) {
                 square.classList.add("camino");
-            } else if (layout[i] == 5) {
-                square.classList.add("guarida");
+            } else if (layout[i] == 5) {  // Cambiado de guarida a rosa
+                square.classList.add("rosa");  // Esto es para el valor 5 en el layout
             }
-
+    
             grid.appendChild(square);
             squares.push(square);
         }
     }
+    
+    function rosaAgafada(){
+        console.log("Intentando agarrar rosa en: ", posicioPrincep);
+        if(squares[posicioPrincep].classList.contains('rosa')){
+            console.log("¡Agarraste una rosa!");
+            score += 10;
+            scoreDisplay.innerHTML = score;
+            squares[posicioPrincep].classList.remove('rosa');
+    
+            espantaDracs(true);
+            setTimeout(() => espantaDracs(false), 10000);
+        }
+    }
+    
 
-    createBoard();
+
+    function rosaPetalo(){
+        console.log("Intentando agarrar rosa en: ", posicioPrincep);
+        if(squares[posicioPrincep].classList.contains('petalos')){
+            console.log("¡Agarraste una rosa!");
+            score += 10;
+            scoreDisplay.innerHTML = score;
+            squares[posicioPrincep].classList.remove('petalos');
+    
+            espantaDracs(true);
+            setTimeout(() => espantaDracs(false), 10000);
+        }
+    }
+    
+
+    function espantaDracs(scareddrac){
+        dracs.forEach(drac=>drac.isScared=scareddrac)
+    }
+    createboard();
+    console.log(squares)
 
     let posicioPrincep;
     let decisio = Math.floor(Math.random() * 2);
@@ -116,66 +147,71 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         squares[posicioPrincep].classList.add("princep");
+
+        rosaAgafada();
+
     }
 
     document.addEventListener("keyup", movePrincep);
 
-    let guaridaPositions = [];
-    for (let i = 0; i < layout.length; i++) {
-        if (layout[i] === 5) {
-            guaridaPositions.push(i);
-        }
-    }
-
-    let dragones = ["drac1", "drac2", "drac3", "drac4"];
-    let posicionesDragones = {};
-
-    dragones.forEach(dragon => {
-        let posicion = guaridaPositions[Math.floor(Math.random() * guaridaPositions.length)];
-        posicionesDragones[dragon] = posicion;
-        squares[posicion].classList.add(dragon);
-    });
-
-    function moveDragons() {
-        dragones.forEach(dragon => {
-            let posicionActual = posicionesDragones[dragon];
-            squares[posicionActual].classList.remove(dragon);
-    
-            let possibleMoves = [
-                posicionActual - 1,   
-                posicionActual + 1,   
-                posicionActual - width, 
-                posicionActual + width  
-            ].filter(pos =>
-                pos >= 0 && pos < squares.length && 
-                !squares[pos].classList.contains("murs") && 
-                !squares[pos].classList.contains("guarida") 
-            );
-    
-            if (possibleMoves.length > 0) {
-                let nuevaPosicion = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-                posicionesDragones[dragon] = nuevaPosicion;
-                squares[nuevaPosicion].classList.add(dragon);
-            }
-        });
-    }
-    
-    setTimeout(() => {
-        guaridaPositions.forEach(pos => {
-            squares[pos].classList.remove("guarida"); 
-        });
-    }, 3000);
-    
-    setInterval(moveDragons, 1000);
-
-
-    function comerPetalos() {
-        if (squares[posicioPrincep].classList.contains("petalos")) {
-            score += 5;
-            scoreDisplay.innerHTML = score;
-            squares[posicioPrincep].classList.remove("petalos");
+    class Drac {
+        constructor(ClassName, startIndex, speed){
+            this.ClassName=ClassName
+            this.startIndex
+            this.speed=speed
+            this.currentIndex=startIndex
+            this.isScared= false
+            this.timerId= NaN
         }
     }
     
+    const dracs = [
+        new Drac('drac1', 348, 250),
+        new Drac('drac2', 376, 400),
+        new Drac('drac3', 351, 300),
 
-});
+        new Drac('drac4', 379, 500)
+    ]
+
+    dracs.forEach(drac=>squares[drac.currentIndex].classList.add(drac.ClassName, 'drac'))
+
+    dracs.forEach(drac=>moveDrac(drac))
+
+    function moveDrac(drac){
+        const directions =[-1,1, width, -width]
+        let direction =directions[Math.floor(Math.random()*directions.length)]
+
+        drac.timerId=setInterval(function(){
+            if(
+                !squares[drac.currentIndex+direction].classList.contains('murs') &&
+                !squares[drac.currentIndex+direction].classList.contains('drac')
+             ){
+        
+                squares[drac.currentIndex].classList.remove(drac.ClassName, 'drac', 'drac-asustat')
+                drac.currentIndex+=direction
+                squares[drac.currentIndex].classList.add(drac.ClassName, 'drac')
+         
+             }
+             else {
+                direction = directions[Math.floor(Math.random() * directions.length)];
+              }
+              
+        if(drac.isScared){
+            squares[drac.currentIndex].classList.add('drac-asustat')
+        }
+        
+        
+            }, drac.speed
+    
+    )
+
+
+    }
+
+
+    
+    
+    
+
+})
+ 

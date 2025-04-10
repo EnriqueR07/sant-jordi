@@ -1,14 +1,41 @@
-body{
+body {
+    margin: 0;
+    height: 100vh;
     background-color: rgb(142, 251, 142);
-        
+    background-image: url(./img/ChatGPT\ Image\ 8\ abr\ 2025\,\ 10_23_15.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.grid{
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0) 200px,
+        rgba(255, 255, 255, 0.8) 500px
+    );
+    pointer-events: none; /* Deja que se pueda interactuar con los elementos debajo */
+    z-index: 0;
+}
+
+.grid {
     width: 560px;
     height: 560px;
     display: flex;
     flex-wrap: wrap;
-
+    z-index: 1; /* Asegura que esté por encima del overlay */
+    position: relative;
 }
+
+
 .grid div{
     width: 20px;
     height: 20px;
@@ -36,7 +63,7 @@ background-color: rgb(0, 100, 230);
 
 }
 .huecos{
-    background-color: rgb(142, 251, 142);
+    background-color: rgb(216, 182, 119);
     background-size: cover;
 
 }
@@ -57,6 +84,14 @@ background-color: rgb(0, 100, 230);
 background-image: url(./img/principe\ derecha.png);
 background-size: cover;
 background-color: aqua;
+}
+
+
+.drac{
+    background-color: rgb(151, 255, 100);
+    background-image: url(./img/dragon\ verde\ derecha.png);
+    background-size: cover;
+    
 }
 
 .drac1{
@@ -92,3 +127,4 @@ background-color: aqua;
 
     
 }
+
